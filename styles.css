@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #cfd9df;
+}
+
+/* Styling Navbar */
+header.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  padding: 15px;
+  text-transform: capitalize;
+}
+
+.firstname {
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.lastname {
+  color: #2c3e50;
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+/* Navbar Flexbox */
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 1rem 1rem;
+  border-radius: 17px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #2c3e50;
+  padding: 1.5rem 1.5rem;
+  color: #1abc9c;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Bagian Main */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+/*membuat deskripsi tulisan dan gambar logo dalam posisi berjejer membentuk dua kolom*/
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+}
+
+main .content .content-description .title {
+  margin-block: 1rem;
+  font-size: 3rem;
+}
+
+main .content .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+  background-color: #2c3e50;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid #2d3e50;
+  background-color: transparent;
+  color: whitesmoke;
+  transition: all 0.3s ease-in-out;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 345px;
+}
+
+.content-image img {
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.content-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(13, 214, 228, 0.486);
+  transition: 0.3s ease;
+}
+
+/* Tampilan Ikon Medsos */
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #2c3e50;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+/* Percantik Ikon Medsos */
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  padding: 5px;
+  font-size: 2.3rem;
+  color: #1abc9c;
+}
+
+/* Bagian Footer */
+footer {
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Layout pada layar yang lebih kecil */
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+  main {
+    padding: 1rem 3rem;
+    width: 100%;
+    padding: 3px;
+  }
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+  main .content .content-image {
+    order: -1;
+    width: 100%;
+  }
+}
