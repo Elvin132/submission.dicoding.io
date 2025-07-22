@@ -190,6 +190,20 @@ main aside .social-media li a:hover {
   color: #1abc9c;
 }
 
+/* Bagian Aside Picture */
+.social-media li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.social-media li img:hover {
+  width: 65px;
+  height: 65px;
+  border-radius: 65px;
+  transition: all .3s ease-in-out;
+}
+
 /* Bagian Footer */
 footer {
   padding: 6px;
